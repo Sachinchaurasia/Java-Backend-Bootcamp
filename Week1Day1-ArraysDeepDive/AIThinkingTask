@@ -1,0 +1,32 @@
+Why is array access O(1) but searching O(n)?
+
+Array access is O(1) because arrays store elements in contiguous memory locations. If we know the index, the computer can directly calculate the memory address and retrieve the element instantly, regardless of the array size.
+
+For example:
+
+int[] arr = {101, 102, 103, 104, 105};
+System.out.println(arr[3]); // 104
+
+The system directly jumps to index 3.
+
+Searching is O(n) because the computer does not know where the value is located. It may need to check each element one by one until it finds the target value or reaches the end of the array.
+
+For example, to find 104:
+
+for(int id : arr) {
+    if(id == 104) {
+        System.out.println("Found");
+    }
+}
+
+In the worst case, every element must be checked.
+
+Backend Engineering Perspective
+
+In backend applications, choosing the right data structure is important for performance. Arrays provide very fast access when the index is known, but searching can become slow for large datasets. That's why backend systems often use structures like HashMap, which can provide near O(1) lookup by key.
+
+Summary:
+
+Array Access = O(1) → direct access using index.
+Array Search = O(n) → may need to scan all elements.
+Faster lookups in large systems often require specialized data structures instead of arrays.
