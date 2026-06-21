@@ -1,0 +1,3 @@
+// Why does Java use ArrayList internally instead of creating a completely new data structure for dynamic storage?
+
+// Java uses ArrayList because arrays are very fast for accessing elements by index. Instead of creating a completely new data structure, ArrayList builds on top of arrays and adds dynamic resizing. When the array becomes full, ArrayList automatically creates a larger array and copies the existing elements into it. This approach provides good performance while keeping the implementation simple. It combines the speed of arrays with the flexibility of dynamic storage. Therefore, ArrayList is efficient, easy to use, and suitable for applications where data size changes frequently.
